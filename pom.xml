@@ -215,7 +215,7 @@
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
-            <version>1.15</version>
+            <version>1.18.0</version>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
@@ -266,7 +266,7 @@
                     <systemPropertyVariables>
                         <jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
                     </systemPropertyVariables>
-                    <excludes></excludes>
+                    <excludes/>
                 </configuration>
             </plugin>
             <plugin>
@@ -314,14 +314,12 @@
                                 </filter>
                             </filters>
                             <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <manifestEntries>
                                         <Main-Class>${exec.mainClass}</Main-Class>
                                     </manifestEntries>
                                 </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>META-INF/services/io.vertx.core.spi.VerticleFactory</resource>
                                     <resource>META-INF/services/io.vertx.core.spi.VertxServiceProvider</resource>
                                 </transformer>
@@ -351,14 +349,12 @@
                                 </filter>
                             </filters>
                             <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <manifestEntries>
                                         <Main-Class>${exec.mainClass}</Main-Class>
                                     </manifestEntries>
                                 </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>META-INF/services/io.vertx.core.spi.VerticleFactory</resource>
                                     <resource>META-INF/services/io.vertx.core.spi.VertxServiceProvider</resource>
                                 </transformer>
